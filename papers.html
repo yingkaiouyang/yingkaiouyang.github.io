@@ -68,9 +68,11 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
+            counter-reset: paper 54;
         }
 
         .paper-card {
+            counter-increment: paper -1;
             background-color: var(--bg-card);
             border-radius: 8px;
             padding: 24px;
@@ -90,6 +92,10 @@
             color: #0f172a;
             margin: 0 0 8px 0;
             line-height: 1.4;
+        }
+
+        .paper-title::before {
+            content: counter(paper) ". ";
         }
 
         .paper-authors {
@@ -189,6 +195,21 @@
 
 
 
+        <div class="paper-card">
+            <h3 class="paper-title">Multiparameter quantum metrology for general and adaptive strategies</h3>
+            <div class="paper-authors">Masahito Hayashi, Yingkai Ouyang</div>
+            <div class="paper-tags">
+                <span class="tag arxiv">arXiv:2611.01027 [quant-ph]</span>
+            </div>
+            <div class="paper-abstract">We develop a conic-programming framework for multiparameter estimation of quantum processes under different classes of sensing strategies. Estimation precision depends on the choice of input probe state and measurement and, when a channel is used multiple times, on the arrangement of channel uses and intermediate controls. We specify different strategy classes through linear normalization constraints on generalized measurements, and formulate the local estimation problem using linear constraints and a linear objective function. We show that the separable-cone program gives the exact precision limit under the local estimation conditions considered here, while cone relaxations yield Cramér-Rao-type lower bounds. For N uses of an identical quantum channel, we prove an exact 1/N scaling law for an RLD-based positive-cone lower bound, even for general process-matrix testers that allow indefinite causal order. Under the stated conditions on the channel and its parameter dependence, the minimum weighted mean-square error also scales as 1/N. This extends an RLD-based restriction on Heisenberg scaling from adaptive strategies to this broader class. For fixed-order adaptive strategies, we show that each process-side conic bound equals the corresponding state-estimation bound optimized over sensor combs. We establish this equality by constructing a sensor comb from the process-side normalization operator. A noisy three-parameter field-sensing model illustrates the framework.</div>
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2611.01027" target="_blank">arXiv Link</a>
+                <a href="https://arxiv.org/pdf/2611.01027" target="_blank">PDF</a>
+                <a href="https://arxiv.org/ps/2611.01027" target="_blank">PS</a>
+                <a href="https://arxiv.org/format/2611.01027" target="_blank">Other formats</a>
+            </div>
+        </div>
+
         <!-- Paper 0 -->
         <div class="paper-card">
             <h3 class="paper-title">Learning unknown stabilizer codes using product measurements</h3>
@@ -240,9 +261,17 @@
             <div class="paper-authors">Lewis Bulled, Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2602.08780 [quant-ph]</span>
+                <span class="tag journal">npj Quantum Information (2026)</span>
+                <a href="https://doi.org/10.1038/s41534-026-01371-3" class="tag doi" target="_blank">DOI: 10.1038/s41534-026-01371-3</a>
             </div>
             <div class="paper-abstract">Quantum synchronisation errors change the number of qubits in a quantum system. We address the longstanding problem of a quantum insertion-deletion equivalence on permutation-invariant codes, detailing the conditions under which such codes are t-insertion error-correctable. We extend these conditions to quantum insdel errors, formulating a more restrictive set of conditions under which permutation-invariant codes are (t,s)-insdel error-correctable.</div>
-            <div class="paper-links"><a href="https://arxiv.org/abs/2602.08780" target="_blank">arXiv Link</a></div>
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2602.08780" target="_blank">arXiv Link</a>
+                <a href="https://arxiv.org/pdf/2602.08780" target="_blank">PDF</a>
+                <a href="https://arxiv.org/ps/2602.08780" target="_blank">PS</a>
+                <a href="https://arxiv.org/format/2602.08780" target="_blank">Other formats</a>
+                <a href="https://www.nature.com/articles/s41534-026-01371-3" target="_blank">Journal Link</a>
+            </div>
         </div>
 
         <!-- Paper 5 -->
@@ -262,9 +291,14 @@
             <div class="paper-authors">Ching-Yi Lai, Pei-Hao Liou, Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2507.10395 [quant-ph, cs.IT]</span>
+                <span class="tag journal">npj Quantum Information (2026)</span>
+                <a href="https://doi.org/10.1038/s41534-026-01401-0" class="tag doi" target="_blank">DOI: 10.1038/s41534-026-01401-0</a>
             </div>
             <div class="paper-abstract">Collective coherent noise poses challenges for fault-tolerant quantum error correction (FTQEC). Here, we introduce a complete fault-tolerant architecture for CE CSS codes based on dual-rail concatenation. We introduce CE-preserving logical CNOT gates and modified Shor- and Steane-type syndrome extraction schemes using zero-controlled NOT gates and CE-compatible ancilla.</div>
-            <div class="paper-links"><a href="https://arxiv.org/abs/2507.10395" target="_blank">arXiv Link</a></div>
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2507.10395" target="_blank">arXiv Link</a>
+                <a href="https://doi.org/10.1038/s41534-026-01401-0" target="_blank">Journal Link</a>
+            </div>
         </div>
 
         <!-- Paper 7 -->
@@ -300,6 +334,7 @@
             <div class="paper-authors">Yingkai Ouyang, Yumang Jing, Gavin K. Brennen</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2411.13142 [quant-ph]</span>
+                <span class="tag journal">PRX Quantum 6, 040341 (2025)</span>
                 <a href="https://doi.org/10.1103/p28m-hb6x" class="tag doi" target="_blank">DOI: 10.1103/p28m-hb6x</a>
             </div>
             <div class="paper-abstract">We present a measurement-free code-switching protocol for universal quantum computation, switching between a stabiliser code for transversal Cliffords and a permutation-invariant (PI) code for transversal non-Cliffords that are logical Z rotations for any rational multiple of pi. We present a protocol for performing controlled-NOTs between the codes using near-term quantum control operations that employ a catalytic bosonic mode.</div>
@@ -446,6 +481,7 @@
             <div class="paper-authors">Zixin Huang, Gavin K. Brennen, Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2204.06044 [quant-ph, astro-ph.IM]</span>
+                <span class="tag journal">Phys. Rev. Lett. 129, 210502 (2022)</span>
                 <a href="https://doi.org/10.1103/PhysRevLett.129.210502" class="tag doi" target="_blank">DOI: 10.1103/PhysRevLett.129.210502</a>
             </div>
             <div class="paper-abstract">We show how to overcome physical limitations of optical interferometers using quantum communication techniques. We present a general framework for using quantum error correction codes for protecting and imaging starlight received at distant telescope sites, showing even small codes offer significant protection against noise.</div>
@@ -458,7 +494,7 @@
             <div class="paper-authors">Yingkai Ouyang, Ching-Yi Lai</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2108.04434 [quant-ph, cs.IT]</span>
-                <span class="tag journal">IEEE Trans. on Information Theory, 68(8) (2022)</span>
+                <span class="tag journal">IEEE Transactions on Information Theory 68(8), 5234-5247 (2022)</span>
                 <a href="https://doi.org/10.1109/TIT.2022.3162264" class="tag doi" target="_blank">DOI: 10.1109/TIT.2022.3162264</a>
             </div>
             <div class="paper-abstract">For any Kraus decomposition of any given quantum channel, we introduce corresponding quantum weight enumerators that naturally generalize the Shor-Laflamme weight enumerators. We establish an indirect linear relationship and construct a general framework for constructing a linear program to check approximate quantum error correction bounds.</div>
@@ -490,6 +526,7 @@
             <div class="paper-authors">Taro Shibayama, Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2105.07214 [quant-ph, cs.IT]</span>
+                <span class="tag journal">2021 IEEE Information Theory Workshop (ITW), pp. 1-6 (2021)</span>
                 <a href="https://doi.org/10.1109/ITW48936.2021.9611450" class="tag doi" target="_blank">DOI: 10.1109/ITW48936.2021.9611450</a>
             </div>
             <div class="paper-abstract">In this paper, we prove the equivalence of inserting separable quantum states and deletions. Hence any quantum code that corrects deletions automatically corrects separable insertions. We prove this using developed algebra for commuting Kraus operators and the Knill-Laflamme conditions.</div>
@@ -502,6 +539,7 @@
             <div class="paper-authors">Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2102.02494 [quant-ph, cs.IT]</span>
+                <span class="tag journal">2021 IEEE International Symposium on Information Theory (ISIT), pp. 446-451 (2021)</span>
                 <a href="https://doi.org/10.1109/ISIT45174.2021.9518078" class="tag doi" target="_blank">DOI: 10.1109/ISIT45174.2021.9518078</a>
             </div>
             <div class="paper-abstract">We note that any permutation-invariant quantum code that has a distance of t+1 can correct t quantum deletions for any positive integer t in both the qubit and the qudit setting. We focus attention on a specific family of shifted gnu codes, showing that their encoding and decoding algorithms run efficiently.</div>
@@ -530,6 +568,7 @@
             <div class="paper-authors">Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2010.00538 [quant-ph, cs.IT]</span>
+                <span class="tag journal">npj Quantum Information 7, 87 (2021)</span>
                 <a href="https://doi.org/10.1038/s41534-021-00429-8" class="tag doi" target="_blank">DOI: 10.1038/s41534-021-00429-8</a>
             </div>
             <div class="paper-abstract">We propose integrating stabilizer codes with constant-excitation codes by code concatenation. By concatenating an [[n,k,d]] stabilizer outer code with dual-rail inner codes, we obtain a [[2n,k,d]] constant-excitation code immune from coherent phase errors and equivalent to a Pauli-rotated stabilizer code.</div>
@@ -542,6 +581,7 @@
             <div class="paper-authors">Yingkai Ouyang, Earl T. Campbell</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:2008.12576 [quant-ph, cs.IT]</span>
+                <span class="tag journal">IEEE Transactions on Information Theory 67(10), 6644-6652 (2021)</span>
                 <a href="https://doi.org/10.1109/TIT.2021.3102873" class="tag doi" target="_blank">DOI: 10.1109/TIT.2021.3102873</a>
             </div>
             <div class="paper-abstract">We obtain results pertaining to the non-existence of approximate quantum error correcting g-gapped single-mode bosonic codes with respect to Gaussian dephasing errors. We show that by using artificially many modes, g-gapped multi-mode codes can yield good approximate quantum error correction codes for any finite magnitude of dephasing.</div>
@@ -634,6 +674,7 @@
             <div class="paper-authors">Yingkai Ouyang, Nathan Shettell, Damian Markham</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:1908.02378 [quant-ph]</span>
+                <span class="tag journal">IEEE Transactions on Information Theory 68(3), 1809-1821 (2022)</span>
                 <a href="https://doi.org/10.1109/TIT.2021.3132634" class="tag doi" target="_blank">DOI: 10.1109/TIT.2021.3132634</a>
             </div>
             <div class="paper-abstract">We prove that, for a set of carefully chosen symmetric probe states that lie within certain quantum error correction codes, quantum metrology exhibits an advantage over classical metrology even after the probe states are corrupted by a constant number of erasure and dephasing errors.</div>
@@ -688,12 +729,28 @@
             </div>
         </div>
 
+        <!-- Paper: Initializing a permutation-invariant quantum error-correction code -->
+        <div class="paper-card">
+            <h3 class="paper-title">Initializing a permutation-invariant quantum error-correction code</h3>
+            <div class="paper-authors">Chunfeng Wu, Yimin Wang, Chu Guo, Yingkai Ouyang, Gangcheng Wang, Xun-Li Feng</div>
+            <div class="paper-tags">
+                <span class="tag journal">Phys. Rev. A 99, 012335 (2019)</span>
+                <a href="https://doi.org/10.1103/PhysRevA.99.012335" class="tag doi" target="_blank">DOI: 10.1103/PhysRevA.99.012335</a>
+            </div>
+            <div class="paper-abstract">Recently, there has been growing interest in using quantum error correction in practical devices. A central issue in quantum error correction is the initialization of quantum data into a quantum error-correction code. Most studies have concentrated on generating quantum codes based on their encoding quantum circuits. However, this often leads to a large number of steps required in the initialization, and hence this process can be prone to errors. The purpose of this work is to demonstrate that permutation-invariant quantum error-correction codes can be created with high fidelity by exploiting their underlying symmetry. The code is initialized on multiple qubits that mutually interact or are themselves coupled to a quantum harmonic oscillator. We show that the so-called selective resonant interaction is derivable on such physical systems. By utilizing the selective resonant interaction, these highly symmetric codes may be rapidly generated with excellent fidelity. We also discuss the potential of initializing permutation-invariant quantum error-correction codes based on the state-of-art experimental techniques.</div>
+            <div class="paper-links">
+                <a href="https://journals.aps.org/pra/pdf/10.1103/PhysRevA.99.012335" target="_blank">PDF</a>
+                <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.99.012335" target="_blank">Journal Link</a>
+            </div>
+        </div>
+
         <!-- Paper 36 -->
         <div class="paper-card">
             <h3 class="paper-title">Permutation-invariant constant-excitation quantum codes for amplitude damping</h3>
             <div class="paper-authors">Yingkai Ouyang, Rui Chao</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:1809.09801 [quant-ph]</span>
+                <span class="tag journal">IEEE Transactions on Information Theory 66(5), 2921-2933 (2020)</span>
                 <a href="https://doi.org/10.1109/TIT.2019.2956142" class="tag doi" target="_blank">DOI: 10.1109/TIT.2019.2956142</a>
             </div>
             <div class="paper-abstract">The purpose of this paper is to give constant-excitation quantum codes that not only correct amplitude damping errors, but are also immune against permutations of their underlying modes. To construct such quantum codes, we use the nullspace of a specially constructed matrix based on integer partitions.</div>
@@ -738,6 +795,7 @@
             <div class="paper-authors">Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:1707.02446 [quant-ph, math-ph]</span>
+                <span class="tag journal">Journal of Mathematical Physics 60(7), 071901 (2019)</span>
                 <a href="https://doi.org/10.6063/1.5084136" class="tag doi" target="_blank">DOI: 10.6063/1.5084136</a>
             </div>
             <div class="paper-abstract">We give a polynomial-time algorithm for computing upper bounds on some of the smaller energy eigenvalues in a spin-1/2 ferromagnetic Heisenberg model with any graph G for the underlying interactions. The algorithm relies on connections between Heisenberg models and the symmetric products of graphs.</div>
@@ -842,6 +900,7 @@
             <div class="paper-authors">Si-Hui Tan, Joshua A. Kettlewell, Yingkai Ouyang, Lin Chen, Joseph F. Fitzsimons</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:1411.5254 [quant-ph, cs.CR]</span>
+                <span class="tag journal">Scientific Reports 6, 33467 (2016)</span>
                 <a href="https://doi.org/10.1038/srep33467" class="tag doi" target="_blank">DOI: 10.1038/srep33467</a>
             </div>
             <div class="paper-abstract">Inspired by group theoretic tools, we use the centralizer of a subgroup of operations to present a private-key quantum homomorphic encryption scheme that enables a broad class of quantum computation on encrypted data, hiding up to a constant fraction of the encrypted information.</div>
@@ -902,7 +961,7 @@
             <div class="paper-authors">Yingkai Ouyang</div>
             <div class="paper-tags">
                 <span class="tag arxiv">arXiv:1004.1127 [quant-ph]</span>
-                <span class="tag journal">IEEE Trans. on Information Theory, 60(6), pp. 1-6 (2014)</span>
+                <span class="tag journal">IEEE Transactions on Information Theory 60(6), 3117-3122 (2014)</span>
                 <a href="https://doi.org/10.1109/TIT.2014.2313577" class="tag doi" target="_blank">DOI: 10.1109/TIT.2014.2313577</a>
             </div>
             <div class="paper-abstract">We demonstrate the existence of concatenated quantum codes that can asymptotically attain the quantum Gilbert-Varshamov bound. The outer codes are quantum generalized Reed-Solomon codes, and the inner codes are random independently chosen stabilizer codes.</div>
